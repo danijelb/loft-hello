@@ -1,6 +1,7 @@
 # Loft manifest: https://paas.beslic.me (contract: listen on $PORT, GET /health, SQLite at $DATA_DIR/app.db)
 name: hello                       # → https://hello.beslic.me
 image: ghcr.io/danijelb/hello
+repo: danijelb/loft-hello        # the GitHub repo whose Actions may deploy this app
 memory: 128m
 cpus: 0.5
 health: /health

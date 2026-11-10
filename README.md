@@ -7,4 +7,4 @@ Runs on [Loft](https://paas.beslic.me). Push to `main` and GitHub Actions tests,
 - `paas.yaml`: the Loft manifest
 - Local run: `npm ci && DATA_DIR=./data npm run migrate && DATA_DIR=./data npm start`
 
-One-time setup: create the app on Loft, add the returned token as the repo secret `LOFT_DEPLOY_TOKEN`, and after the first push make the GHCR package public (package settings → visibility).
+Setup: set `name`, `image` and `repo` in `paas.yaml`, create the app on Loft (`create_app`), push to `main`. No secrets: GitHub Actions proves it is this repo with an OIDC token, and Loft pulls the private image with its own read-only token.
