@@ -1,0 +1,17 @@
+{
+  "name": "hello",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=26"
+  },
+  "scripts": {
+    "start": "node src/server.ts",
+    "migrate": "node src/migrate.ts",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@hono/node-server": "^2.1.6",
+    "hono": "^4.13.17"
+  }
+}

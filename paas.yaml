@@ -1,0 +1,12 @@
+# Loft manifest: https://paas.beslic.me (contract: listen on $PORT, GET /health, SQLite at $DATA_DIR/app.db)
+name: hello                       # → https://hello.beslic.me
+image: ghcr.io/danijelb/hello
+memory: 128m
+cpus: 0.5
+health: /health
+migrate: ["node", "src/migrate.ts"]
+promote: auto
+volumes:
+  - /data
+env:
+  LOG_LEVEL: info
